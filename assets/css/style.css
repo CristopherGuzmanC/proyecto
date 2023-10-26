@@ -1,5 +1,14 @@
+:root{
+    --altura-cabezal:80px;
+    --altura-footer:80px;
+}
+
 #header-principal{
-    height: 80px;
+    height: var(--altura-cabezal);
+    background-color: black;
+}
+#footer-principal{
+    height: var(--altura-footer);
     background-color: black;
 }
 .menu-nav{
@@ -26,4 +35,17 @@
 .container-fluid{
     margin: 0;
     padding: 0;
+}
+.row{
+    margin: 0;
+}
+.slider-principal{
+    height: calc(100vh - var(--altura-cabezal) - var(--altura-footer));
+    background-color: red;
+}
+.posi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
