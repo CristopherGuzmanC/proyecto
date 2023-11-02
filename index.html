@@ -16,6 +16,7 @@
     
     <!-- AQUÍ SE AGREGA LOS CSS PERSONALIZADOS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 </head>
 <body>
@@ -23,14 +24,20 @@
     <header id="header-principal">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 posi">
-                    <nav class="menu-nav">
-                        <ul>
-                            <li ><a href="parte1.html">parte1</a></li>
-                            <li ><a href="parte2.html">parte2</a></li>
+                <div class="col-12 ">
+                    <nav class="posi">
+                        <input type="checkbox" id="toogle">
+                        <ul class="list">
+                            <li ><a href="queesguilty.html">Que es Guilty</a></li>
+                            <li ><a href="miembros.html">Miembros</a></li>
                             <li ><a href="parte3.html">parte3</a></li>
-                            <li ><a href="parte4.html">parte4</a></li>
+                            <li ><a href="reclute.html">Reclute</a></li>
                         </ul>
+                        <label for="toogle" class="icon-bars">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </label>
                     </nav>
                 </div>
             </div>
@@ -41,7 +48,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 posi">
-                    <img class="img-secundaria "  src="assets/img/Logoproyec.svg" alt="">
+                    <img class="img-secundaria " src="assets/img/Logoproyec.svg" alt="">
                 </div>
                 <div class="col-12 posi"><h1 class="tamano" >GUILTY</h1></div>
 
@@ -51,11 +58,26 @@
 
     
     <!-- FIN DEL CONTENIDO DE LA WEB-->
-    <footer id="footer-principal" class="posi">
-        <div class="container">
+    <footer id="footer-principal">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12 posi">
-                    <p>FOOTER</p>
+                <div id="footer-socialmedia" class="col-12">
+                    <a href="https://twitter.com/" class="footer-link" id="twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://discord.com/" class="footer-link" id="discord">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="https://twitch.com/" class="footer-link" id="twitch">
+                        <i class="fa-brands fa-twitch"></i>
+                    </a>
+                    <a href="https://instagram.com/" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <div id="footercopyright" class="col-12">
+                    &#169
+                    2023 all rights reserved
                 </div>
             </div>
         </div>

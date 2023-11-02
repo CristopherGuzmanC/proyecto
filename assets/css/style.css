@@ -1,5 +1,4 @@
-@import url(/assets/fonts/stylefonts.css);
-@import url(/assets/css/stylemedia.css);
+@import url("stylemedia.css");
 
 :root{
     --altura-cabezal:80px;
@@ -10,9 +9,12 @@ body{
     color: white;
     font-family: pearl;
     font-weight: bold;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 .tamano{
-    font-size: 120px
+    font-size: 50px
 }
 #header-principal{
     height: var(--altura-cabezal);
@@ -21,33 +23,105 @@ body{
     height: var(--altura-footer);
 
 }
-.menu-nav{
-    float: right;
-}
-.menu-nav > ul {
-    list-style-type: none;
-    overflow: hidden;
-    display: block;
-}
-.menu-nav > ul > li {
+nav{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 5%;
+    height: var(--altura-cabezal);
+
+ }
+nav .img-principal{
     float: left;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
 }
-.menu-nav > ul > li > a {
+nav .list{
+    float: right;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .list li{
+    list-style: none ;
+}
+nav .list a{
+    display: block;
+    text-transform: uppercase;
+    padding: 25px 35px;
+    font-size: 18px;
+    font-weight: bold;
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    display: block;
-    padding: 25px 35px;
 }
-.menu-nav > ul > li > a:hover{
+nav .list a:hover{
     background: linear-gradient(to bottom, rgba(9,3,3,1) 0%,rgba(49,6,14,1) 53%,rgba(112,24,22,1) 100%,rgba(112,24,22,1) 100%);
-    border-radius: 20px;
     height: 20px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+#toogle{
+    position: absolute;
+    top: -100px;
+}
+nav .icon-bars{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 58%;
+    transform: translateY(-50%);
+}
+nav .icon-bars .line{
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+@media(max-width: 768px){
+    nav .list{
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 100px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: linear-gradient(to bottom, rgba(9,3,3,1) 0%,rgba(49,6,14,1) 53%,rgba(112,24,22,1) 100%,rgba(112,24,22,1) 100%);
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+
+    }
+    nav .list a{
+        font-size: 20px;
+        display: block;
+    }
+    nav :checked ~ .list{
+        bottom: 0;
+    }
+    nav .icon-bars{
+        display: block;
+    }
+    img-secundaria {
+        height: calc(80vh - var(--altura-cabezal) - var(--altura-footer));
+    }
+
+}
+
 .container-fluid{
     margin: 0;
     padding: 0;
@@ -60,22 +134,27 @@ body{
 }
 .posi{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.img-principal{
-    height: 79px;
-    width: auto;
 }
 .img-secundaria{
     height: calc(80vh - var(--altura-cabezal) - var(--altura-footer));
 }
-.menu-icon img{
-    width: 30px;
-    height: 30px;
-    border-radius: 2px;
+#footer-socialmedia{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
 }
-.menu-icon, #check{
-    display: none;
+#footer-socialmedia .footer-link{
+    height: 2.5rem;
+    width: 2.5rem;
+    color: white;
+}
+#footercopyright{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
