@@ -1,4 +1,4 @@
-@import url("stylemedia.css");
+@import "stylemedia.css";
 
 :root{
     --altura-cabezal:80px;
@@ -88,39 +88,7 @@ nav .icon-bars .line{
     border-radius: 3px;
     transition: all .3s ease-in-out;
 }
-@media(max-width: 768px){
-    nav .list{
-        float: none;
-        position: fixed;
-        z-index: 9;
-        left: 0;
-        right: 0;
-        top: 100px;
-        bottom: 100%;
-        width: auto;
-        height: auto;
-        flex-direction: column;
-        justify-content: space-evenly;
-        background: linear-gradient(to bottom, rgba(9,3,3,1) 0%,rgba(49,6,14,1) 53%,rgba(112,24,22,1) 100%,rgba(112,24,22,1) 100%);
-        overflow: hidden;
-        transition: all .5s ease-in-out;
 
-    }
-    nav .list a{
-        font-size: 20px;
-        display: block;
-    }
-    nav :checked ~ .list{
-        bottom: 0;
-    }
-    nav .icon-bars{
-        display: block;
-    }
-    img-secundaria {
-        height: calc(80vh - var(--altura-cabezal) - var(--altura-footer));
-    }
-
-}
 
 .container-fluid{
     margin: 0;
@@ -157,4 +125,38 @@ nav .icon-bars .line{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/* **************MEDIA***************** */
+@media(max-width: 768px){
+    nav .list{
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 100px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: linear-gradient(to bottom, rgba(9,3,3,1) 0%,rgba(49,6,14,1) 53%,rgba(112,24,22,1) 100%,rgba(112,24,22,1) 100%);
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+
+    }
+    nav .list a{
+        font-size: 20px;
+        display: block;
+    }
+    nav :checked ~ .list{
+        bottom: 0;
+    }
+    nav .icon-bars{
+        display: block;
+    }
+    img-secundaria {
+        height: calc(80vh - var(--altura-cabezal) - var(--altura-footer));
+    }
+
 }
