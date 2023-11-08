@@ -165,7 +165,7 @@ nav .icon-bars .line{
     border: 1px solid white;
     padding: 20px;
     background: linear-gradient(to bottom, rgba(9,3,3,1) 0%,rgba(49,6,14,1) 53%,rgba(112,24,22,1) 100%,rgba(112,24,22,1) 100%);
-    color: #999;
+    color: white;
 }
 #product input{
     border: 1px solid #ccc;
