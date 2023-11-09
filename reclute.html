@@ -47,43 +47,43 @@
     </header>
 
     <section class="principal posi">
-        <div class="container principal posi">
-            <div class="row">
-                <div class="posi">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center">
 
                     <form method="post" action="" name="product" id="product">
-                        <p class="posi">Formulario de reclute</p>
-                        <div>
-                            <label for="nickname">Nickname:</label><br>
-                            <input type="text" id="nickname" name="nickname" required><br>
-                        </div>
-                        <div >
-                            <label for="discordId">ID de Discord:</label><br>
-                            <input type="text" id="discordId" name="discordId" required><br>
-                        </div>
-                        <div>
-                            <label for="game">Juego:</label><br>
-                            <select id="game" name="game" required>
-                                <option value="Black Desert">Black Desert</option>
-                                <option value="New World">New World</option>
-                                <option value="Lost Ark">Lost Ark</option>
-                                <option value="Monster Hunter">Monster Hunter</option>
-                                <option value="Guild Wars 2">Guild Wars 2</option>
-                            </select><br>
-                        </div>
-                        <div>
-                            <label for="availability">Disponibilidad para jugar:</label><br>
-                            <input type="text" id="availability" name="availability" required><br>
-                        </div>
-                        <div>
-                            <label for="equipment">URL de la foto del equipo de juego:</label><br>
-                            <input type="text" id="equipment" name="equipment" required><br>
-                        </div>
-                        <div class="posi">
-                            <input id="enviarreclute" type="submit" value="Enviar">
+                        <h1 class="form_title">Formulario de reclute</h1>
+                        <div class="form_container">
+                            <div class="form_group">
+                                <input type="text" id="nickname" name="nickname" class="form_input" required>
+                                <label class="form_label" for="nickname">Nickname:</label>
+                            </div>
+                            <div class="form_group">
+                                <input type="text" id="discordId" name="discordId" class="form_input" required>
+                                <label class="form_label" for="discordId">ID de Discord:</label>
+                            </div>
+                            <div class="form_group">
+                                <select id="game" name="game" class="form_input" required>
+                                    <option value="Black Desert">Black Desert</option>
+                                    <option value="New World">New World</option>
+                                    <option value="Lost Ark">Lost Ark</option>
+                                    <option value="Monster Hunter">Monster Hunter</option>
+                                    <option value="Guild Wars 2">Guild Wars 2</option>
+                                </select>
+                                <label for="game">Juego:</label>
+                            </div>
+                            <div class="form_group">
+                                <input type="text" id="availability" name="availability" class="form_input" required>
+                                <label class="form_label" for="availability">Disponibilidad para jugar:</label>
+                            </div>
+                            <div class="form_group">
+                                <input type="text" id="equipment" name="equipment" class="form_input" required>
+                                <label class="form_label" for="equipment">URL de la foto del equipo de juego:</label>
+                            </div>
+
+                            <input class="form_submit" type="submit" value="Enviar">
                         </div>
                     </form>
-                </div>
+
             </div>
         </div>
     </section>

@@ -1,4 +1,3 @@
-@import url("stylemedia.css");
 
 :root{
     --altura-cabezal:80px;
@@ -21,7 +20,6 @@ body{
 }
 #footer-principal{
     height: var(--altura-footer);
-
 }
 nav{
     position: fixed;
@@ -61,7 +59,7 @@ nav .list a{
     text-decoration: none;
 }
 nav .list a:hover{
-    background: linear-gradient(to bottom, rgba(9,3,3,1) 0%,rgba(49,6,14,1) 53%,rgba(112,24,22,1) 100%,rgba(112,24,22,1) 100%);
+
     height: 20px;
     border-radius: 20px;
     display: flex;
@@ -88,14 +86,11 @@ nav .icon-bars .line{
     border-radius: 3px;
     transition: all .3s ease-in-out;
 }
-
-
-.container-fluid{
-    margin: 0;
-    padding: 0;
-}
 .row{
     margin: 0;
+}
+.principal111{
+    height: 100vh;
 }
 .principal{
     height: calc(100vh - var(--altura-cabezal) - var(--altura-footer));
@@ -130,6 +125,8 @@ nav .icon-bars .line{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .video-socialmedia .videosocial-link{
     width: 2.5rem;
@@ -159,44 +156,54 @@ nav .icon-bars .line{
     overflow: hidden;
     box-shadow: 0 1px 54px rgba(0,0,0,0.9);
 }
-
 #product{
-    border-radius: 2%;
-    border: 1px solid white;
-    padding: 20px;
     background: linear-gradient(to bottom, rgba(9,3,3,1) 0%,rgba(49,6,14,1) 53%,rgba(112,24,22,1) 100%,rgba(112,24,22,1) 100%);
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 6em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgba( 0 0 0 / 30%);
+    text-align: center;
+}
+.form_title{
+    font-size: 2rem;
+}
+.form_container{
+    display: grid;
+    gap: 1.5em;
+}
+.form_group{
+    position: relative;
+}
+.form_input{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: 1px 1px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+#product select option{
+    color: black;
+}
+.form_label{
+    cursor: pointer;
+}
+.form_submit{
+    background: #3866f2;
     color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .4em 0;
+    border: none;
+    border-radius: .5em;
 }
-#product input{
-    border: 1px solid #ccc;
-    border-radius:2%;
-    padding: 1px;
-    width: 100%;
-}
-#product select{
-    border: 1px solid #ccc;
-    padding: 1px;
-    width: 100%;
-}
-#product select, textarea{
-    border: 0;
-    outline: none;
-}
-#enviarreclute{
-    border-radius: 5px;
-    color: #999;
-    margin-top: 10px;
-}
-
-#product input, textarea{
-    border: 0;
-    outline: none;
-}
-
 
 /* ------------ MEDIAS ------------ */
 
-@media(max-width: 862px){
+@media(max-width: 768px){
     nav .list{
         float: none;
         position: fixed;
@@ -224,6 +231,8 @@ nav .icon-bars .line{
     nav .icon-bars{
         display: block;
     }
-
+    .form_title{
+        font-size: 1.8rem;
+    }
 
 }
